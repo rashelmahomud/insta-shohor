@@ -138,7 +138,7 @@ const createPost = (post) => {
     return div;
 };
 
-const showPosts = (posts) => {
+const showPosts = (posts) =>{
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
 
@@ -150,6 +150,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
+    
     likedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "liked" ).appendChild(div);
@@ -158,7 +159,8 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
